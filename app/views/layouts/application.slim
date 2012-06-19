@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title = "BSB Hospital Odontológico"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  body class="#{@page}"
+  	=render 'frontend/menu'
+
+  #wrap
+    = yield
