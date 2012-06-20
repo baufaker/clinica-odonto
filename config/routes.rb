@@ -3,6 +3,10 @@ Projetoexemplo::Application.routes.draw do
   match '/frontend/:template' => 'frontend#show', as: :frontend
   match '/frontend'           => 'frontend#index'
   
+  match '/servico/:template' => 'paginas#servicos'
+  match '/:template'           => 'paginas#paginas'
+  match '/'           => 'frontend#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
