@@ -12,7 +12,7 @@
 			img class="agende" src="/assets/agende.png"
 	.dicas
 		h2 Dicas de Saúde
-		a href="/frontend/dica"
+		a href="/dica/#{Dica.last.id}"
 			img class="dica" src="#{Dica.last.image.thumb.url}"
 		a class="titulo" href="/dica"
 			span class="titulo" #{Dica.last.title}
