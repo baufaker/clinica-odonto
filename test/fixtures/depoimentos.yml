@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome_pessoa: MyString
+  cargo_pessoa: MyString
+  conteudo: MyText
+
+two:
+  nome_pessoa: MyString
+  cargo_pessoa: MyString
+  conteudo: MyText
