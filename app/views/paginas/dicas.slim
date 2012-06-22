@@ -1,0 +1,16 @@
+- @page = "pagdicas"
+.container
+	img	class="banner" src="/assets/dicas.jpg"
+	.dicas
+		h1 Dicas de Saúde
+		- Dica.all.each do |d|
+			.exemplo
+				p #{d.created_at.strftime('%d/%m/%Y')} às #{d.created_at.time.strftime('%Hh%M')}
+				img src="#{Dica.last.image.medium.url}"
+				h2 #{d.title}
+				p #{truncate(d.content, :length => 500, :separator => ' ')}
+				a class="continue" href="/dica/#{d.id}" Continue lendo...
+	.navegacao
+		a class="prox" href="#" Próxima 
+		a class="ant" href="#" Anterior
+	

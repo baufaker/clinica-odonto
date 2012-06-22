@@ -1,0 +1,10 @@
+- @page = "pagdica"
+.container
+	img	class="banner" src="/assets/dicas.jpg"
+	.dica
+		h1 #{@dica.title}
+		.exemplo
+			p #{@dica.created_at.strftime('%d/%m/%Y')} às #{@dica.created_at.time.strftime('%Hh%M')}
+			img src="#{Dica.last.image.medium.url}"
+			p #{@dica.content}
+		a class="all" href="/dicas" Todas as dicas...

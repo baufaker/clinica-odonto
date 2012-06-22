@@ -8,15 +8,15 @@
 			| Você e sua família acabam de ganhar mais um motivo para sorrir. Chegou em Taguatinga o 
 			span	BSB Hospital Odontológico 
 			com profissionais especializados, atendimento personalizado, equipamentos modernos e centro cirúrgico equipado, preparado para oferecer com qualidade o serviço odontológico que você e sua família merecem.
-		a href="/frontend/contato"
+		a href="/contato"
 			img class="agende" src="/assets/agende.png"
 	.dicas
 		h2 Dicas de Saúde
 		a href="/frontend/dica"
-			img class="dica" src="/assets/dica.jpg"
-		a class="titulo" href="/frontend/dica"
-			span class="titulo" A escovação
-		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta mauris sed risus placerat iaculis. Nulla quis sapien felis, a luctus turpis. Nulla facilisi. Duis mi ante, porta at sodales in, pellentesque sit amet felis. Donec interdum nisi vel diam m... cursus. Donec condimentum, mi sed adipiscing elementum, augue tortor tincidunt massa, a dignissim enim nisl id nibh. Donec velit mi, congue quis egestas a, vestibulum sed nisi. Ut tristique, enim eu varius luctus, felis magna posuere nunc, nec laoreet erat elit ac turpis.
+			img class="dica" src="#{Dica.last.image.thumb.url}"
+		a class="titulo" href="/dica"
+			span class="titulo" #{Dica.last.title}
+		p #{truncate(Dica.last.content, :length => 500, :separator => ' ')}
 		a class="continue" href="/frontend/dica" Continue lendo...
 	.depoimentos
 		h2 Depoimentos
