@@ -1,6 +1,10 @@
 class PaginasController < ApplicationController
   def index; end
   
+  def dica
+    @dica = Dica.find(params[:id])
+  end
+  
   def paginas
     render params[:template]
   end

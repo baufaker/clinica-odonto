@@ -1,0 +1,13 @@
+- @page = "pagcontato"
+.container
+	h1 Contato
+	.contact
+		= form_for :mensagem,  :url => {:action => "envio_mensagem"} do |f|
+			=f.text_field :name, placeholder: "Nome...", name: "name", id: "nome"
+			=f.text_field :email, placeholder: "Email...", name: "email", id: "email"
+			=f.text_area :message, placeholder: "Digite a sua mensagem aqui...", cols:"82", rows: "20", name: "message", id: "texto"
+			input#enviar type="submit" value="ENVIAR"
+		p Telefone: (61) 3027.9595
+	.map
+		p Em frente ao Alameda Shopping, Taguatinga Sul
+		img src="/assets/map.jpg"

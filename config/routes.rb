@@ -1,11 +1,20 @@
 Projetoexemplo::Application.routes.draw do
   
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   match '/frontend/:template' => 'frontend#show', as: :frontend
   match '/frontend'           => 'frontend#index'
   
+  
+  match '/dica/:id' => 'paginas#dica'
+  match '/contato' => 'contato#contato'
+  match '/envio_mensagem' => 'contato#envio_mensagem'
   match '/servico/:template' => 'paginas#servicos'
   match '/:template'           => 'paginas#paginas'
-  match '/'           => 'frontend#index'
+  match '/'           => 'paginas#index'
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
