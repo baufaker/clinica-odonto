@@ -6,7 +6,7 @@
 		- Dica.all.each do |d|
 			.exemplo
 				p #{d.created_at.strftime('%d/%m/%Y')} às #{d.created_at.time.strftime('%Hh%M')}
-				img src="#{Dica.last.image.medium.url}"
+				img src="#{d.image.medium.url}"
 				h2 #{d.title}
 				p #{truncate(d.content, :length => 500, :separator => ' ')}
 				a class="continue" href="/dica/#{d.id}" Continue lendo...
