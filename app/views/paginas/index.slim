@@ -17,7 +17,7 @@
 		a class="titulo" href="/dica"
 			span class="titulo" #{Dica.last.title}
 		p #{truncate(Dica.last.content, :length => 500, :separator => ' ')}
-		a class="continue" href="/frontend/dica" Continue lendo...
+		a class="continue" href="/dica#{Dica.last.id}" Continue lendo...
 	.depoimentos
 		h2 Depoimentos
 		.depoimento
