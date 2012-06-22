@@ -14,10 +14,10 @@
 		h2 Dicas de Saúde
 		a href="/dica/#{Dica.last.id}"
 			img class="dica" src="#{Dica.last.image.thumb.url}"
-		a class="titulo" href="/dica"
+		a class="titulo" href="/dica/#{Dica.last.id}"
 			span class="titulo" #{Dica.last.title}
 		p #{truncate(Dica.last.content, :length => 500, :separator => ' ')}
-		a class="continue" href="/dica#{Dica.last.id}" Continue lendo...
+		a class="continue" href="/dica/#{Dica.last.id}" Continue lendo...
 	.depoimentos
 		h2 Depoimentos
 		- Depoimento.all.each do |d|
