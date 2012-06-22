@@ -14,14 +14,13 @@
 		h2 Dicas de Saúde
 		a href="/dica/#{Dica.last.id}"
 			img class="dica" src="#{Dica.last.image.thumb.url}"
-		a class="titulo" href="/dica"
+		a class="titulo" href="/dica/#{Dica.last.id}"
 			span class="titulo" #{Dica.last.title}
 		p #{truncate(Dica.last.content, :length => 500, :separator => ' ')}
-		a class="continue" href="/dica#{Dica.last.id}" Continue lendo...
+		a class="continue" href="/dica/#{Dica.last.id}" Continue lendo...
 	.depoimentos
 		h2 Depoimentos
-		.depoimento
-			span.id Henrique Costa, 20 anos, 21/05/2012:
-			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor nibh id dui sodales ac cursus tellus sagittis. Nam viverra tortor non purus scelerisque sit amet hendrerit orci aliquam. Sed augue metus, dictum sed fermentum sed, hendrerit non neque. 
-
-
+		- Depoimento.all.each do |d|
+			.depoimento
+				span.id #{d.nome_pessoa}, #{d.cargo_pessoa}:
+				p "#{d.conteudo}"
