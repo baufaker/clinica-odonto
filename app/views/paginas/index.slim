@@ -12,12 +12,12 @@
 			img class="agende" src="/assets/agende.png"
 	.dicas
 		h2 Dicas de Saúde
-		a href="/dica/#{Dica.last.id}"
-			img class="dica" src="#{Dica.last.image.thumb.url}"
-		a class="titulo" href="/dica/#{Dica.last.id}"
-			span class="titulo" #{Dica.last.title}
-		p #{truncate(Dica.last.content, :length => 500, :separator => ' ')}
-		a class="continue" href="/dica/#{Dica.last.id}" Continue lendo...
+		a href="/dica/#{Dica.first.id}"
+			img class="dica" src="#{Dica.first.image.thumb.url}"
+		a class="titulo" href="/dica/#{Dica.first.id}"
+			span class="titulo" #{Dica.first.title}
+		p #{truncate(Dica.first.content, :length => 500, :separator => ' ')}
+		a class="continue" href="/dica/#{Dica.first.id}" Continue lendo...
 	.depoimentos
 		h2 Depoimentos
 		- Depoimento.all.each do |d|
