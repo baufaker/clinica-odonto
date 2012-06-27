@@ -19,7 +19,7 @@
 		p #{truncate(Dica.first.content, :length => 500, :separator => ' ')}
 		a class="continue" href="/dica/#{Dica.first.id}" Continue lendo...
 	.depoimentos
-		h2 Depoimentos
+		
 		- Depoimento.all.each do |d|
 			.depoimento
 				span.id #{d.nome_pessoa}, #{d.cargo_pessoa}:
